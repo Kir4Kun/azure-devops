@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api/src",
+  "monorepo": true,
+  "root": "apps/api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.app.json"
+  },
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json"
+      }
+    },
+    "todo-service": {
+      "type": "application",
+      "root": "apps/todo-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/todo-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/todo-service/tsconfig.app.json"
+      }
+    }
+  }
+}
